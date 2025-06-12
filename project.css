@@ -60,7 +60,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px white;
 }
 
 .modal {
@@ -72,20 +72,20 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: black;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: white;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid gray;
     width: 50%;
     border-radius: 8px;
 }
 
 .close {
-    color: #aaa;
+    color: gray;
     float: right;
     font-size: 28px;
     font-weight: bold;

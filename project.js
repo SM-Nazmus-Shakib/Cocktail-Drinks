@@ -19,7 +19,7 @@ div.innerHTML = `
 <h5>${drink.strDrink}</h5>
 <p>${drink.strInstructions.slice(0, 50)}</p>
 <button onclick="singleDrink('${drink.idDrink}')">Details</button>
-<button onclick="handleAddToCart('${drink.strDrink.slice(0, 12)}','${drink.idDrink}','${drink.strDrinkThumb}')">Add toTO CArt</button>
+<button onclick="handleAddToCart('${drink.strDrink.slice(0, 12)}','${drink.idDrink}','${drink.strDrinkThumb}')">Add To Cart</button>
 `;
 
 drinkContainer.appendChild(div);
@@ -88,6 +88,3 @@ displayDrinks(data.drinks);
 
 loadAllDrinks();
 
-document.getElementById("search-input").addEventListener('keypress', (e) => {
-if (e.key === 'Enter') searchDrinks();
-});

@@ -28,12 +28,16 @@ drinkContainer.appendChild(div);
 
 const handleAddToCart = (name, id, img) => {
 const cartCount = document.getElementById("count").innerText;
+let convertedCount = parseInt(cartCount);
+if (convertedCount >= 7) {
+alert("Cart is full! Maximum 7 items allowed.");
+return;
+}
 
-let convertedCOunt = parseInt(cartCount);
-convertedCOunt = convertedCOunt + 1;
-document.getElementById("count").innerText = convertedCOunt;
+convertedCount = convertedCount + 1;
+document.getElementById("count").innerText = convertedCount;
 
-console.log(convertedCOunt);
+console.log(convertedCount);
 
 const container = document.getElementById("cart-main-container");
 console.log(name, id, img);
@@ -43,10 +47,17 @@ div.classList.add("cart-info");
 div.innerHTML = `
 <img src="${img}" width="50" height="50">
 <p>${name}</p>
+<button onclick="removeFromCart(this)" class="remove-btn">Remove</button>
 `;
 container.appendChild(div);
 };
-
+const removeFromCart = (button) => {
+const cartCount = document.getElementById("count").innerText;
+let convertedCount = parseInt(cartCount);
+convertedCount = convertedCount - 1;
+document.getElementById("count").innerText = convertedCount;
+button.parentElement.remove();
+};
 const UpdateTotal = () => {
 const allPrice = document.getElementsByClassName("price")
 let count = 0
